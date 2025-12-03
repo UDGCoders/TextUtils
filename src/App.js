@@ -29,7 +29,7 @@ function App() {
       setMyStyle({ color: 'white' });
       setMyMode("Light Mode");
       document.body.style.color = "white";
-      document.body.style.backgroundColor = '#040231eb';
+      document.body.style.backgroundColor = '#00274c';
       showAlert("Dark mode has been triggered", "success");
     } else {
       setMyStyle({ color: 'black' });
@@ -54,12 +54,16 @@ function App() {
         <Alert alert={alert} />
         <Routes>
           <Route
-            path="/"
+            exact path="/TextUtils"
             element={<TextForm heading="Enter Your text below" showAlert={showAlert} />}
           />
           <Route
-            path="/about"
-            element={<About />}
+            exact path="/"
+            element={<TextForm heading="Enter Your text below" showAlert={showAlert} />}
+          />
+          <Route
+           exact path="/about"
+            element={<About mode={Mode}/>}
           />
         </Routes>
       </div>

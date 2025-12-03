@@ -28,12 +28,12 @@ export default function TextForm(props) {
                 <h1>{props.heading}</h1>
                 <textarea name="form-label" id="mybox" value={text} onChange={chnaged} rows="8" className='w-100' />
                 <button className='btn btn-outline-primary' onClick={uppercase}>Convert to UppperCase</button>
-                <button className='btn btn-outline-primary mx-2' onClick={lowercase}>Convert to lower case</button>
-                <button className='btn btn-outline-primary mx-2' onClick={clearText}>Clear Text</button>
+                <button className='btn btn-outline-primary mx-2 my-2' onClick={lowercase}>Convert to lower case</button>
+                <button className='btn btn-outline-primary mx-2 my-2' onClick={clearText}>Clear Text</button>
             </div>
             <div className="container">
                 <h1>Your Text Summary is here</h1>
-                <p>Your text has <b> {text.split(" ").length-1} words </b>
+                <p>Your text has <b> {text.split(" ").filter((element)=>{return element.length!==0}).length} words </b>
                     and <b> {text.length} characters </b>
                 </p>
                 <p>{0.008 * text.split(" ").length} minutes to read this text</p>
