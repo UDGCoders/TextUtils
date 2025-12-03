@@ -3,7 +3,8 @@ import React from 'react'
 
 export default function Alert(props) {
   return (
-    props.alert && <div className={`alert alert-${props.alert.type} text-center position-static alert-dismissible fade show `}role="alert">
+    props.alert && <div className={`alert alert-${props.alert.type} text-center
+     alert-dismissible fade show `}role="alert">
     <strong>{props.alert.type}</strong> {props.alert.msg}
   </div>
   )
