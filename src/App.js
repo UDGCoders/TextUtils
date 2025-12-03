@@ -52,7 +52,6 @@ function App() {
 
       <div className="container gy-3">
         <Alert alert={alert} />
-
         <Routes>
           <Route
             path="/"

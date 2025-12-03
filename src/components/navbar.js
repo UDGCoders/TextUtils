@@ -1,11 +1,10 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 export default function NavBar(props) {
 
   return (
     <nav className={`navbar navbar-expand-lg 
-      ${props.myStyle.backgroundColor === "black" ? "navbar-dark bg-dark text-light" : "navbar-light bg-light"}`}>
+      ${props.myStyle.color === "black" ? "navbar-dark bg-dark text-light" : "navbar-light bg-light"}`}>
       
       <div className="container-fluid">
         <a className="navbar-brand" href="/">{props.title}</a>
